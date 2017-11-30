@@ -14,16 +14,12 @@ Um Zusatzentgelte berechnen zu können, muss das bisherige Batchgrouperformat um
 
 Dies führt dazu, dass pro Zeile mehrere verschiedene Trennzeichen mit unterschiedlicher Bedeutung benutzt werden:
 
-<center>
-
 |Trenner|Beschreibung|Benutzt als|
 |---|---|---|
 |``;``|Semikolon|Top-level Spaltentrenner|
 |<code>&#124;</code>|Pipe-Symbol|Listentrenner|
 |``:``|Doppelpunkt|Strukturtrenner|
 [Tabelle 1: Bedeutung der Trennzeichen]
-
-</center>
 
 Der Listentrenner wird dafür benutzt, Elemente einer Liste (z.B. Liste der Diagnosesn, Liste der Prozeduren) voneinander abzutrennen. Per Strukturtrenner werden einzelne Felder einer sogenannten Struktur getrennt. Eine Struktur ist zum Beispiel ein Prozedur-Eintrag in der Prozedurenliste, bestehend aus CHOP Code, Seitigkeit und Datum.
 
@@ -37,7 +33,6 @@ key;age;age_days;birth_weight;sex;adm_date;adm_mode;exit_date;exit_mode;los;
 ```
 
 ##### Erläuterung der Variablen
-<center>
 
 |Name|Beschreibung|Datentyp|BFS MS Format|
 |---|---|---|---|
@@ -57,7 +52,6 @@ key;age;age_days;birth_weight;sex;adm_date;adm_mode;exit_date;exit_mode;los;
 |`medications`|Medikationen|Text (Liste)|Variablen `4.8.V02`-`4.8.V15`|
 [Tabelle 2: Variablen und deren Entsprechung in der Medizinischen Statistik]
 
-</center>
 
 **Wichtig:** Bitte beachten Sie die Ausführungen in der [aktuellen Grouper-Dokumentation](https://grouper.swissdrg.org/grouper-doku-de.pdf) zu den genauen Umrechnungen der einzelnen Variablen aus der Medizinischen Statistik.
 
@@ -89,7 +83,6 @@ Folgende Codierungen für eine einzelne Prozedur sind gültig:
 #### Medikationen (Verabreichung von Medikamenten)
 Im SwissDRG Batchgrouper 2017 Format werden zusätzlich zu Diagnosen und Prozeduren auch Medikationen codiert. Dies ist erforderlich, damit der Grouper Zusatzentgelte berechnen kann. Medikationen werden analog zu den Prozeduren als Liste von Strukturen kodiert. Das Format einer Medikation ist `atc_code:annex:application:dose:unit`.
 
-<center>
 
 |Feld|Bezeichnung|Datentyp|
 |---|---|---|
@@ -99,8 +92,6 @@ Im SwissDRG Batchgrouper 2017 Format werden zusätzlich zu Diagnosen und Prozedu
 |`dose`|Verabreichte Dosis|Dezimalzahl</br>(Punkt als Dezimaltrennzeichen)|
 |`unit`|Einheit|Text|
 [Tabelle 3: Struktur einer Verabreichung]
-
-</center>
 
 **Achtung:** Die Felder `application` und `annex` dürfen nicht beliebig befüllt werden. Bitte konsultieren Sie das [Technische Begleitblatt zur Erhebung der Medizinischen Statistik](http://www.swissdrg.org/assets/pdf/Erhebung_2017/161216_Technisches_Begleitblatt_2017_d.pdf), Punkt 3.1b und 3.1c.
 
@@ -120,7 +111,6 @@ ID;DRG;MDC;GAGE;GSEX;GST;PCCL;ECW;CFLAG
 ```
 
 Die Kürzel sind im Folgenden kurz beschrieben:
-<center>
 
 |Spalte|Beschreibung|
 |---|---|
@@ -134,7 +124,6 @@ Die Kürzel sind im Folgenden kurz beschrieben:
 |`ECW`|Effektives Kostengewicht|
 |`CFLAG`|Flag für die Berechnung des effektiven Kostengewichtes|
 
-</center>
 
 Für eine genauere Beschreibung der Variablen im Ausgabeformat verweisen wir auch hier auf die [aktuelle Grouper-Dokumentation](https://grouper.swissdrg.org/grouper-doku-de.pdf).
 
@@ -147,7 +136,6 @@ ID;TOTAL_AMOUNT;SUPPLEMENTS
 
 Die Kürzel sind in der nachfolgenden Tabelle kurz erläutert:
 
-<center>
 
 |Spalte|Beschreibung|
 |---|---|
@@ -155,11 +143,9 @@ Die Kürzel sind in der nachfolgenden Tabelle kurz erläutert:
 |`TOTAL_AMOUNT`|aufsummierter Gesamtbetrag aller berechneten Zusatzentgelte|
 |`SUPPLEMENTS`|Liste von ZE-Strukturen|
 
-</center>
 
 Eine einzelne Zusatzentgelt-Struktur ist folgendermassen kodiert: `ze_id:ze_code:ze_amount`.
 
-<center>
 
 |Feld|Beschreibung|
 |---|---|
@@ -167,7 +153,6 @@ Eine einzelne Zusatzentgelt-Struktur ist folgendermassen kodiert: `ze_id:ze_code
 |`ze_code`|Auslösender Code (CHOP oder ATC Code)|
 |`ze_amount`|Betrag des ZE gemäss Fallpauschalenkatalog|
 
-</center>
 
 #### Beispiel
 ```
