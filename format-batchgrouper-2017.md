@@ -19,7 +19,6 @@ Dies führt dazu, dass pro Zeile mehrere verschiedene Trennzeichen mit unterschi
 |``;``|Semikolon|Top-level Spaltentrenner|
 |<code>&#124;</code>|Pipe-Symbol|Listentrenner|
 |``:``|Doppelpunkt|Strukturtrenner|
-[Tabelle 1: Bedeutung der Trennzeichen]
 
 Der Listentrenner wird dafür benutzt, Elemente einer Liste (z.B. Liste der Diagnosesn, Liste der Prozeduren) voneinander abzutrennen. Per Strukturtrenner werden einzelne Felder einer sogenannten Struktur getrennt. Eine Struktur ist zum Beispiel ein Prozedur-Eintrag in der Prozedurenliste, bestehend aus CHOP Code, Seitigkeit und Datum.
 
@@ -50,8 +49,6 @@ key;age;age_days;birth_weight;sex;adm_date;adm_mode;exit_date;exit_mode;los;
 |`diagnoses`|Diagnosen|Text (Liste)|Variablen `4.2`|
 |`procedures`|Prozeduren|Text (Liste)|Variablen `4.3`|
 |`medications`|Medikationen|Text (Liste)|Variablen `4.8.V02`-`4.8.V15`|
-[Tabelle 2: Variablen und deren Entsprechung in der Medizinischen Statistik]
-
 
 **Wichtig:** Bitte beachten Sie die Ausführungen in der [aktuellen Grouper-Dokumentation](https://grouper.swissdrg.org/grouper-doku-de.pdf) zu den genauen Umrechnungen der einzelnen Variablen aus der Medizinischen Statistik.
 
@@ -91,7 +88,6 @@ Im SwissDRG Batchgrouper 2017 Format werden zusätzlich zu Diagnosen und Prozedu
 |`application`|Verabreichungsart|Text|
 |`dose`|Verabreichte Dosis|Dezimalzahl</br>(Punkt als Dezimaltrennzeichen)|
 |`unit`|Einheit|Text|
-[Tabelle 3: Struktur einer Verabreichung]
 
 **Achtung:** Die Felder `application` und `annex` dürfen nicht beliebig befüllt werden. Bitte konsultieren Sie das [Technische Begleitblatt zur Erhebung der Medizinischen Statistik](http://www.swissdrg.org/assets/pdf/Erhebung_2017/161216_Technisches_Begleitblatt_2017_d.pdf), Punkt 3.1b und 3.1c.
 
