@@ -15,5 +15,9 @@ Coming Soon <sup>tm</sup>
 ## Batchgrouping
 Coming Soon <sup>tm</sup>
 
+### Input Formats
+* [Batchgrouper 2017 Format](format-batchgrouper-2017.md)
+* ...
+
 ## Supplement Grouping
 Coming Soon <sup>tm</sup>
