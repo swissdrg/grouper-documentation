@@ -22,7 +22,7 @@ Dies führt dazu, dass pro Zeile mehrere verschiedene Trennzeichen mit unterschi
 
 Der Listentrenner wird dafür benutzt, Elemente einer Liste (z.B. Liste der Diagnosesn, Liste der Prozeduren) voneinander abzutrennen. Per Strukturtrenner werden einzelne Felder einer sogenannten Struktur getrennt. Eine Struktur ist zum Beispiel ein Prozedur-Eintrag in der Prozedurenliste, bestehend aus CHOP Code, Seitigkeit und Datum.
 
-#### Allgemeines Format
+### Allgemeines Format
 Das Batchgrouper Format 2017 codiert einen minimalen gruppierbaren Datensatz in 14 Spalten, die durch Semikola voneinander getrennt sind. Das Zeilenformat ist wie folgt definiert:
 
 ```text
@@ -31,7 +31,7 @@ key;age;age_days;birth_weight;sex;adm_date;adm_mode;exit_date;exit_mode;los;
 	medications[atc_code:annex:application:dose:unit]
 ```
 
-##### Erläuterung der Variablen
+#### Erläuterung der Variablen
 
 |Name|Beschreibung|Datentyp|BFS MS Format|
 |---|---|---|---|
@@ -52,20 +52,20 @@ key;age;age_days;birth_weight;sex;adm_date;adm_mode;exit_date;exit_mode;los;
 
 **Wichtig:** Bitte beachten Sie die Ausführungen in der [aktuellen Grouper-Dokumentation](https://grouper.swissdrg.org/grouper-doku-de.pdf) zu den genauen Umrechnungen der einzelnen Variablen aus der Medizinischen Statistik.
 
-##### Beispiel
+#### Beispiel
 ```text
 1234;24;;;M;20160501;01;20160511;00;10;0;I269|E1190|E780;
   992502::|874199::|992813::;L01XC07::IV:400.0:mg|B02BD02:Plas:IV:20000:U
 ```
 
-#### Diagnosen
+### Diagnosen
 Diagnosen werden im neuen Format als Liste in der Spalte `diagnoses` codiert, anstatt in eine vordefinierte Anzahl Spalten eingefügt zu werden. Die **Hauptdiagnose** (4.2.V010) wird immer zuerst kodiert. Anschliessend werden alle Nebendiagnosen angefügt. Die Reihenfolge der Nebendiagnosen ist nicht gruppierungsrelevant. Der MD-Zusatz zur Hauptdiagnose (4.2.V020) wird als normale Nebendiagnose behandelt.
 
-##### Beispiele
+#### Beispiele
 * `...;I269;...` (nur Hauptdiagnose)
 * `...;I269|E1190;...` (Hauptdiagnose mit einer Nebendiagnose)
 
-#### Prozeduren
+### Prozeduren
 Ähnlich wie Diagnosen werden auch die Prozeduren als Liste in der Spalte `procedures` codiert. Dabei werden die einzelnen Prozeduren als sogenannte Struktur codiert. Das Format der Struktur ist `chop_chode:side:date`. Wie im bisherigen Format können damit sowohl die Seitigkeit als auch das Datum der Prozedur optional codiert werden. Die CHOP Kodes werden immer ohne Punkt kodiert. Wenn die Seitigkeit unbekannt ist oder sich die Frage nicht stellt, kann das Feld leer gelassen werden. Hat ein Fall keine Prozeduren, wird die daher leere Liste als zwei aufeinanderfolgende Semikola geschrieben:
 
 * Keine Prozeduren: `...;;...`
@@ -77,7 +77,7 @@ Folgende Codierungen für eine einzelne Prozedur sind gültig:
 * CHOP Code und Seitigkeit: `5423:B:`
 * CHOP Code, Seitigkeit und Datum: `5423:B:20090325` oder `5423::20090325`
 
-#### Medikationen (Verabreichung von Medikamenten)
+### Medikationen (Verabreichung von Medikamenten)
 Im SwissDRG Batchgrouper 2017 Format werden zusätzlich zu Diagnosen und Prozeduren auch Medikationen codiert. Dies ist erforderlich, damit der Grouper Zusatzentgelte berechnen kann. Medikationen werden analog zu den Prozeduren als Liste von Strukturen kodiert. Das Format einer Medikation ist `atc_code:annex:application:dose:unit`.
 
 
@@ -92,7 +92,7 @@ Im SwissDRG Batchgrouper 2017 Format werden zusätzlich zu Diagnosen und Prozedu
 **Achtung:** Die Felder `application` und `annex` dürfen nicht beliebig befüllt werden. Bitte konsultieren Sie das [Technische Begleitblatt zur Erhebung der Medizinischen Statistik](http://www.swissdrg.org/assets/pdf/Erhebung_2017/161216_Technisches_Begleitblatt_2017_d.pdf), Punkt 3.1b und 3.1c.
 
 
-##### Beispiele
+#### Beispiele
 * `...;L01XC07::IV:450.0:mg|B02BD02:Plas:IV:1500:U` (2 Medikamente, das erste ohne Zusatzangabe)
 * `...;L04AA04:CFR:IV:200:mg|J02AC04:Susp:O:500:mg`
 
