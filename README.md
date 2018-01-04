@@ -7,19 +7,9 @@ Coming Soon <sup>tm</sup>
 * [Specifications](pages/specifications.md)
 * [Grouping](pages/grouping.md)
     
-* [Batchgrouping](#batchgrouping)
-    * Input formats
-* [Supplement Grouping](#supplement-grouping)
-
-
-
-
-## Batchgrouping
-Coming Soon <sup>tm</sup>
-
-### Input Formats
-* [Batchgrouper 2017 Format](pages/format-batchgrouper-2017.md)
-* ...
-
-## Supplement Grouping
-[Supplement Grouping](pages/supplement-grouping.md)
+* [Batchgrouping](pages/batchgrouping.md)
+    * [Batchgrouper 2017 Format](pages/format-batchgrouper-2017.md)
+    * Batchgrouper Format: <small>Coming Soon <sup>tm</sup></small>
+    * BFS Format: <small>Coming Soon <sup>tm</sup></small>
+    * URL Patient Case Format: <small>Coming Soon <sup>tm</sup></small>    
+* [Supplement Grouping](pages/supplement-grouping.md)
