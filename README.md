@@ -4,6 +4,7 @@
 Coming Soon <sup>tm</sup>
 
 ## TOC
+* [Specifications](pages/specifications.md)
 * [Grouping](pages/grouping.md)
     
 * [Batchgrouping](#batchgrouping)

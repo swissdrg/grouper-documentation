@@ -31,7 +31,7 @@ import org.swissdrg.grouper.WeightingRelation;
 
 import java.util.Map;
 
-public class ApiExample {
+public class GrouperDemoSwissDRG {
 
     // specs as published by SwissDRG on download.swissdrg.org
     private static final String WORKSPACE_FOLDER = "/path/to/spec-6av";
