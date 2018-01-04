@@ -4,13 +4,14 @@
 Coming Soon <sup>tm</sup>
 
 ## TOC
-* [Grouping](#grouping)
+* [Grouping](pages/grouping.md)
+    
 * [Batchgrouping](#batchgrouping)
     * Input formats
 * [Supplement Grouping](#supplement-grouping)
 
-## Grouping
-Coming Soon <sup>tm</sup>
+
+
 
 ## Batchgrouping
 Coming Soon <sup>tm</sup>
