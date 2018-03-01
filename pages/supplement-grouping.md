@@ -1,9 +1,40 @@
 ## 1.1.0
 With the release of Java Grouper 1.1.0 we extend the grouping functionality to also be capable of
-calculating appropriate supplements for patient cases. As a consequence of this, we have introduced some changes
+calculating appropriate supplements for patient cases. Therefor, we had to introduce some changes
 to the grouper API.
 
-### Changes
+We have also updated the Batchgrouper so it is able to group supplements (see below).
+
+The SwissDRG [Online-Grouper](https://grouper.swissdrg.org/) is not able yet to group supplements, since supplement 
+grouping is currently being beta-tested. This goes for both the online single case and batch grouper.  
+
+Supplement grouping with the Online-Grouper will be available on 30.11.2018.
+
+### Supplement Grouping using the Batchgrouper
+
+To use the batchgrouper from the 1.1.0 branch to group supplements based on a BFS ("MedStat") file, issue this command 
+on the command line:
+
+```
+java -jar java-grouper-1.1.0-BETA-all.jar -cat path/to/catalogue-acute.csv -f bfs -out results.csv path/to/workspace.json medstat-patientdata.dat
+``` 
+(see [the description of the batchgrouper](https://swissdrg.github.io/grouper-documentation/pages/batchgrouping.html) for 
+details)
+
+This command would produce a normal DRG-grouper result file (here named "results.csv") and a second output file with the
+supplement grouper results, named "results.csv.ze", at the same place.
+
+Instead of a BFS patient file, you can also use the new 
+[batchgrouper format 2017](https://swissdrg.github.io/grouper-documentation/pages/format-batchgrouper-2017.html) (since 
+it also contains the medication data).
+
+To see the batchgrouper's option, call it without any parameters:
+
+    java -jar path/to/java-grouper-1.1.0-BETA-all.jar 
+
+     
+### Supplement Grouping using the GrouperKernel
+#### Changes
 
 ##### New public API package
 You can now use all classes and interfaces in the `org.swissdrg.zegrouper.api` top level package. Note that only classes and interfaces
@@ -21,12 +52,12 @@ available with the 'batch_2017' and 'bfs' input formats, since these are the onl
 The `IGrouperReader` interface was extended and now provides the `loadSupplementGrouper(String)` method, which
 returns an instance of `ISupplementGrouper`. 
 
-##### Caluclating supplements
+##### Calculating supplements
 In order to calculate supplements of a `PatientCase`, you first have to decorate it by creating an instance of 
 `SupplementPatientCase`. You can then pass this instance to the `ISupplementGrouper#group` method, which returns
 an `ISupplementGroupResult`. This result holds all calculated supplements, along with additional information.
 
-### Example
+##### Example
 
 ```java
 
@@ -65,7 +96,7 @@ class SupplementExample {
 
 ```
 
-### Potentially breaking changes
+#### Potentially breaking changes
 The following list states changes that potentially break applications built against the older 1.0.X branch. Please note that 
 we only state potentially breaking changes to classes within the public API packages.
 
