@@ -5,10 +5,12 @@ to the grouper API.
 
 We have also updated the Batchgrouper so it is able to group supplements (see below).
 
-The SwissDRG [Online-Grouper](https://grouper.swissdrg.org/) is not able yet to group supplements, since supplement 
-grouping is currently being beta-tested. This goes for both the online single case and batch grouper.  
+**Note:**
 
-Supplement grouping with the Online-Grouper will be available on 30.11.2018.
+> The SwissDRG [Online-Grouper](https://grouper.swissdrg.org/) is not able yet to group supplements, since supplement 
+grouping is currently being beta-tested. This goes for both the online single case and batch grouper.  
+>
+> Supplement grouping with the Online-Grouper will be available on 30.11.2018.
 
 ### Supplement Grouping using the Batchgrouper
 
@@ -18,17 +20,17 @@ on the command line:
 ```
 java -jar java-grouper-1.1.0-BETA-all.jar -cat path/to/catalogue-acute.csv -f bfs -out results.csv path/to/workspace.json medstat-patientdata.dat
 ``` 
-(see [the description of the batchgrouper](https://swissdrg.github.io/grouper-documentation/pages/batchgrouping.html) for 
+(see [description of the batchgrouper](https://swissdrg.github.io/grouper-documentation/pages/batchgrouping.html) for 
 details)
 
-This command would produce a normal DRG-grouper result file (here named "results.csv") and a second output file with the
+This command outputs a normal DRG-grouper result file (here named "results.csv") and a second output file with the
 supplement grouper results, named "results.csv.ze", at the same place.
 
 Instead of a BFS patient file, you can also use the new 
 [batchgrouper format 2017](https://swissdrg.github.io/grouper-documentation/pages/format-batchgrouper-2017.html) (since 
 it also contains the medication data).
 
-To see the batchgrouper's option, call it without any parameters:
+To see the batchgrouper's options, call it without any parameters:
 
     java -jar path/to/java-grouper-1.1.0-BETA-all.jar 
 
