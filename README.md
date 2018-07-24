@@ -19,6 +19,7 @@ Java version: 1.6
 * [Batchgrouping](pages/batchgrouping.md)
     * [Input and Output Formats](#input-and-Output-Formats)
 * [Supplement Grouping](pages/supplement-grouping.md)
+* [Calculation of Transfer Discounts](pages/transfer-discount-calculation.md)
 
 ## Input and Output Formats
 
