@@ -17,7 +17,7 @@ where
 the SwissDRG homepage, see e.g. [here](https://www.swissdrg.org/de/akutsomatik/swissdrg-system-70/fallpauschalenkatalog)
 for SwissDRG 7.0.  
 *But* the MLOS provided there are rounded to one decimal, 
-**whereas the grouper uses the MLOS rounded down to the next integer!**  
+**whereas the grouper uses the MLOS rounded down to the preceding integer!**  
 This new way to calculate the transfer discount was introduced with SwissDRG 8.0. 
 
 ### Example
@@ -25,8 +25,8 @@ This new way to calculate the transfer discount was introduced with SwissDRG 8.0
 Given SwissDRG 7.0 and a transferred patient case with 
 
 * LOS: 10 days
-* DRG: A42A 
-  - => MLOS: 20.8 => grouper uses 20.0
+* DRG: A42A. So according to the [catalogue of SwissDRG 7.0](https://www.swissdrg.org/de/akutsomatik/swissdrg-system-70/fallpauschalenkatalog)
+  - MLOS: 20.8 *=> grouper uses 20.0*
   - daily transfer discount:  0.22
 
 So the transfer discount is 
