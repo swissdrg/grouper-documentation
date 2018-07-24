@@ -20,8 +20,8 @@ for SwissDRG 7.0.
 **whereas the grouper uses the MLOS rounded down to the preceding integer!**  
 
 This new way to calculate the transfer discount was introduced with SwissDRG 8.0. 
-You'll find detailled description in section 2.2.3 of the "Bericht zur 
-Weiterentwicklung der SwissDRG Tarifstruktur 8.0":
+Section 2.2.3 of the "Bericht zur 
+Weiterentwicklung der SwissDRG Tarifstruktur 8.0" describes the changes in detail:
 
 * [deutsch](https://www.swissdrg.org/application/files/6415/3200/6776/Bericht_zur_Entwicklung_der_Tarifstruktur_8.0_Veroeffentlichungsversion.pdf)
 * [français](http://www.swissdrg.org/application/files/5115/3200/6813/Bericht_zur_Entwicklung_der_Tarifstruktur_8.0_Veroeffentlichungsversion_f.pdf)
