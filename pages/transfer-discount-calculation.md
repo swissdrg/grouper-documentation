@@ -25,9 +25,9 @@ This new way to calculate the transfer discount was introduced with SwissDRG 8.0
 Given SwissDRG 7.0 and a transferred patient case with 
 
 * LOS: 10 days
-* DRG: A42A. So according to the [catalogue of SwissDRG 7.0](https://www.swissdrg.org/de/akutsomatik/swissdrg-system-70/fallpauschalenkatalog)
-  - MLOS: 20.8 *=> grouper uses 20.0*
+* DRG: A42A. So according to the [catalogue of SwissDRG 7.0](https://www.swissdrg.org/de/akutsomatik/swissdrg-system-70/fallpauschalenkatalog):
   - daily transfer discount:  0.22
+  - MLOS: 20.8 *=> grouper uses 20.0*
 
 So the transfer discount is 
 
