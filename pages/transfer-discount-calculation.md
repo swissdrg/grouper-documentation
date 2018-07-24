@@ -26,6 +26,7 @@ Given SwissDRG 7.0 and a transferred patient case with
 
 * LOS: 10 days
 * DRG: A42A. So according to the [catalogue of SwissDRG 7.0](https://www.swissdrg.org/de/akutsomatik/swissdrg-system-70/fallpauschalenkatalog):
+  - cost weight: 4.823
   - daily transfer discount:  0.22
   - MLOS: 20.8 *=> grouper uses 20.0*
 
