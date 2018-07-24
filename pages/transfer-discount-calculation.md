@@ -18,7 +18,18 @@ the SwissDRG homepage, see e.g. [here](https://www.swissdrg.org/de/akutsomatik/s
 for SwissDRG 7.0.  
 *But* the MLOS provided there are rounded to one decimal, 
 **whereas the grouper uses the MLOS rounded down to the preceding integer!**  
+
 This new way to calculate the transfer discount was introduced with SwissDRG 8.0. 
+You'll find detailled description in section 2.2.3 of the "Bericht zur 
+Weiterentwicklung der SwissDRG Tarifstruktur 8.0":
+
+* [deutsch](https://www.swissdrg.org/application/files/6415/3200/6776/Bericht_zur_Entwicklung_der_Tarifstruktur_8.0_Veroeffentlichungsversion.pdf)
+* [français](http://www.swissdrg.org/application/files/5115/3200/6813/Bericht_zur_Entwicklung_der_Tarifstruktur_8.0_Veroeffentlichungsversion_f.pdf)
+* [italiano](https://www.swissdrg.org/application/files/7915/3200/6837/Bericht_zur_Entwicklung_der_Tarifstruktur_8.0_Veroeffentlichungsversion_i.pdf)
+
+Please note that the application of this updated calculation is mandadory: Grouper
+users cannot use the old way of calculation, lest they get invalid effective 
+cost weights which differ from the public SwissDRG version.
 
 ### Example
 
