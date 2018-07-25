@@ -33,21 +33,19 @@ cost weights which differ from the public SwissDRG version.
 
 ### Example
 
-Given SwissDRG 7.0 and a transferred patient case with 
+Given SwissDRG 8.0 and a transferred patient case with 
 
-* LOS: 10 days
-* DRG: A42A. So according to the [catalogue of SwissDRG 7.0](https://www.swissdrg.org/de/akutsomatik/swissdrg-system-70/fallpauschalenkatalog):
-  - cost weight: 4.823
-  - daily transfer discount:  0.22
-  - MLOS: 20.8 *=> grouper uses 20.0*
+* LOS: 5 days
+* DRG: A92B. So according to the 
+  [catalogue of SwissDRG 8.0](https://www.swissdrg.org/de/akutsomatik/swissdrg-system-80/fallpauschalenkatalog):
+  - cost weight: 1.151
+  - daily transfer discount:  0.115
+  - MLOS: 10.8 *=> grouper uses 10.0*
 
 So the transfer discount is 
 
-    (20 - 10) * 0.22 = 2.2
+    (10 - 5) * 0.115 = 0.575
 
 Therefore the effective cost weight will be 
 
-    4.823 - 2.2 = 2.447  
-
-as illustrated
-[here](https://manual70.swissdrg.org/drgs/5a1d5e5ab09492ce9bfd58ed?utf8=%E2%9C%93&los%5B%5D=10&adm_mode_filter=00&sep_mode_filter=06).
+    1.151 - 0.575 = 0.576  
